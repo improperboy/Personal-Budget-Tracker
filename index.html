@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Personal Budget Tracker</h1>
+        <div class="budget-container">
+            <div class="add-container">
+                <div class="add-budget-container">
+                    <h4>Add Budget</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="budget">Budget:</label>
+                            <input class="form-control" type="text" id="budget">
+                        </div>
+                        <button class="btn btn-primary form-control">Add Budget</button>
+                    </form>
+                </div>
+                <div class="add-expense-container mt-4">
+                    <h4>Add Expense</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="expense">Expense Title:</label>
+                            <input class="form-control" type="text" id="expense">
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount:</label>
+                            <input class="form-control" type="text" id="amount">
+                        </div>
+                        <button class="btn btn-primary form-control">Add Expense</button>
+                    </form>
+                </div>
+                <button class="btn btn-danger form-control mt-2" onclick="resetAll()">Reset All</button>
+            </div>
+
+            <div class="display-container">
+                <div class="heading row">
+                    <div class="alert alert-primary">
+                        Total Budget: <span id="totalBudget">0</span>
+                    </div>
+                    <div class="alert alert-primary">
+                        Total Expenses: <span id="totalExpenses">0</span>
+                    </div>
+                    <div class="alert alert-primary">
+                        Budget Left: <span id="budgetLeft">0</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="table-container table-responsive">
+                    <h5>Expense History:</h5>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Expense Name</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js">   
+    </script>
+</body>
+</html>
